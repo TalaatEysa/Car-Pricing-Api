@@ -57,3 +57,7 @@ report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
 #SQlite DB
 db.sqlite
+
+.eslintrc.js
+.gitignore
+.prettierrc
