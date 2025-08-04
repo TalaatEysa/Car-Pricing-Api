@@ -23,8 +23,12 @@ export class UsersService {
         if (!user) {
             throw new NotFoundException('User not found');
         }
-        Object.assign(user, attrs);
-        return this.repo.save(user);
+        const cleanedAttrs =Object.fromEntries(
+            Object.entries(attrs).filter(([key, value]) => value !== undefined)
+        );
+        const updatedUser = { ...user, ...cleanedAttrs };
+
+        return this.repo.save(updatedUser);
     }
     async remove(id: number) {
         const user = await this.findOne(id);
