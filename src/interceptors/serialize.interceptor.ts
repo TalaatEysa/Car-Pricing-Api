@@ -5,7 +5,8 @@ import {
     CallHandler
 } from '@nestjs/common';
 import { plainToInstance } from 'class-transformer';
-import { map, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 interface ClassConstructor {
     new (...args: any[]): {}
