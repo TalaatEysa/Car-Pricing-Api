@@ -16,6 +16,9 @@ content-type: application/json
     "password": "rt25re"
 }
 
+### Sign out
+POST http://localhost:3000/auth/signout
+
 ### Get the current User
 GET http://localhost:3000/auth/whoami
 
