@@ -3,7 +3,7 @@ POST http://localhost:3000/reports
 content-type: application/json
 
 {
-   "price": 500000,
+   "price": 400000,
    "make": "toyota",
    "model": "corolla",
    "year": 1980,
@@ -13,7 +13,7 @@ content-type: application/json
 }
 
 ### Approve an existing Report
-PATCH http://localhost:3000/reports/1
+PATCH http://localhost:3000/reports/4
 content-type: application/json
 
 {
